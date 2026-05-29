@@ -1,0 +1,614 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Sarah Jenkins",
+      "email": "admin@littlecare.com",
+      "role": "admin",
+      "password": "password123"
+    },
+    {
+      "id": "u2",
+      "name": "Emily Watson",
+      "email": "teacher@littlecare.com",
+      "role": "teacher",
+      "password": "password123"
+    },
+    {
+      "id": "u3",
+      "name": "David Miller",
+      "email": "parent@littlecare.com",
+      "role": "parent",
+      "password": "password123",
+      "studentId": "s1"
+    },
+    {
+      "id": "u4",
+      "name": "Jessica Cruz",
+      "email": "staff@littlecare.com",
+      "role": "daycare_staff",
+      "password": "password123"
+    },
+    {
+      "id": "u5",
+      "name": "Marcus Vance",
+      "email": "counsellor@littlecare.com",
+      "role": "counsellor",
+      "password": "password123"
+    },
+    {
+      "id": "u6",
+      "name": "Robert Vance",
+      "email": "accountant@littlecare.com",
+      "role": "accountant",
+      "password": "password123"
+    }
+  ],
+  "classes": [
+    {
+      "id": "c1",
+      "name": "Tiny Tots (Toddlers)",
+      "capacity": 15,
+      "ageGroup": "1.5 - 2.5 Years"
+    },
+    {
+      "id": "c2",
+      "name": "Little Explorers (Nursery)",
+      "capacity": 15,
+      "ageGroup": "2.5 - 3.5 Years"
+    },
+    {
+      "id": "c3",
+      "name": "Kinder Minds (Preschool)",
+      "capacity": 20,
+      "ageGroup": "3.5 - 5 Years"
+    },
+    {
+      "id": "c4",
+      "name": "Daycare Main Room",
+      "capacity": 25,
+      "ageGroup": "1 - 8 Years"
+    }
+  ],
+  "students": [
+    {
+      "id": "s1",
+      "name": "Leo Miller",
+      "photo": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&q=80&w=200",
+      "classId": "c2",
+      "ageGroup": "2.5 - 3.5 Years",
+      "allergies": "Peanut allergy",
+      "medicalNotes": "Needs inhaler in case of asthma flare-up",
+      "parentName": "David Miller",
+      "parentPhone": "+1 (555) 019-2834",
+      "emergencyContact": "Sarah Miller (+1 (555) 019-2835)",
+      "pickupPersons": [
+        {
+          "name": "David Miller",
+          "relation": "Father",
+          "phone": "+1 (555) 019-2834",
+          "photoUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+        },
+        {
+          "name": "Sarah Miller",
+          "relation": "Mother",
+          "phone": "+1 (555) 019-2835",
+          "photoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "Emma Watson Jr.",
+      "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200",
+      "classId": "c1",
+      "ageGroup": "1.5 - 2.5 Years",
+      "allergies": "None",
+      "medicalNotes": "None",
+      "parentName": "Jane Watson",
+      "parentPhone": "+1 (555) 012-5839",
+      "emergencyContact": "George Watson (+1 (555) 012-5840)",
+      "pickupPersons": [
+        {
+          "name": "Jane Watson",
+          "relation": "Mother",
+          "phone": "+1 (555) 012-5839",
+          "photoUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "name": "Liam Nelson",
+      "photo": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&q=80&w=200",
+      "classId": "c3",
+      "ageGroup": "3.5 - 5 Years",
+      "allergies": "Dairy products",
+      "medicalNotes": "Lactose intolerant",
+      "parentName": "Arthur Nelson",
+      "parentPhone": "+1 (555) 017-9912",
+      "emergencyContact": " Arthur Nelson (+1 (555) 017-9912)",
+      "pickupPersons": [
+        {
+          "name": "Arthur Nelson",
+          "relation": "Father",
+          "phone": "+1 (555) 017-9912",
+          "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+        }
+      ]
+    }
+  ],
+  "fees": [
+    {
+      "id": "f1",
+      "studentId": "s1",
+      "feeType": "Term Fees",
+      "totalAmount": 1200,
+      "paidAmount": 800,
+      "pendingAmount": 400,
+      "dueDate": "2026-06-15",
+      "status": "Partially Paid"
+    },
+    {
+      "id": "f2",
+      "studentId": "s2",
+      "feeType": "Admission Fees",
+      "totalAmount": 1500,
+      "paidAmount": 1500,
+      "pendingAmount": 0,
+      "dueDate": "2026-05-10",
+      "status": "Paid"
+    },
+    {
+      "id": "f3",
+      "studentId": "s3",
+      "feeType": "Daycare Monthly Fees",
+      "totalAmount": 500,
+      "paidAmount": 0,
+      "pendingAmount": 500,
+      "dueDate": "2026-05-25",
+      "status": "Overdue"
+    }
+  ],
+  "payments": [
+    {
+      "id": "p1",
+      "feeId": "f1",
+      "amount": 800,
+      "paymentDate": "2026-05-01",
+      "paymentMethod": "Card",
+      "receiptNumber": "REC-2026-001"
+    },
+    {
+      "id": "p2",
+      "feeId": "f2",
+      "amount": 1500,
+      "paymentDate": "2026-04-20",
+      "paymentMethod": "Bank Transfer",
+      "receiptNumber": "REC-2026-002"
+    }
+  ],
+  "pickup_qr": [
+    {
+      "id": "qr1",
+      "studentId": "s1",
+      "qrCodeText": "PICKUP-Lmiller-s1-David",
+      "status": "Active"
+    },
+    {
+      "id": "qr2",
+      "studentId": "s2",
+      "qrCodeText": "PICKUP-Ewatson-s2-Jane",
+      "status": "Active"
+    },
+    {
+      "id": "qr3",
+      "studentId": "s3",
+      "qrCodeText": "PICKUP-Lnelson-s3-Arthur",
+      "status": "Active"
+    }
+  ],
+  "pickup_logs": [
+    {
+      "id": "pl1",
+      "studentId": "s1",
+      "guardianName": "David Miller",
+      "relation": "Father",
+      "timestamp": "2026-05-28T16:30:00Z",
+      "status": "Success"
+    },
+    {
+      "id": "pl2",
+      "studentId": "s2",
+      "guardianName": "Jane Watson",
+      "relation": "Mother",
+      "timestamp": "2026-05-28T16:45:00Z",
+      "status": "Success"
+    },
+    {
+      "studentId": "s1",
+      "guardianName": "David Miller",
+      "relation": "Father",
+      "timestamp": "2026-05-29T06:10:41.353Z",
+      "status": "Success",
+      "id": "pic_1780035041354_3"
+    }
+  ],
+  "activities": [
+    {
+      "id": "act1",
+      "classId": "c2",
+      "title": "Finger Painting & Sensory Fun",
+      "description": "Children explored warm colors through finger painting and paper textures.",
+      "date": "2026-05-29",
+      "tags": [
+        "s1"
+      ]
+    },
+    {
+      "id": "act2",
+      "classId": "c3",
+      "title": "Planting Sunflower Seeds",
+      "description": "Minds-on science lesson on root growth and germination.",
+      "date": "2026-05-29",
+      "tags": [
+        "s3"
+      ]
+    }
+  ],
+  "activity_photos": [
+    {
+      "id": "ap1",
+      "activityId": "act1",
+      "url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400",
+      "caption": "Leo mixing red and yellow paint!"
+    },
+    {
+      "id": "ap2",
+      "activityId": "act2",
+      "url": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=400",
+      "caption": "Liam putting soil in his paper cup."
+    }
+  ],
+  "curriculum_plans": [
+    {
+      "id": "cp1",
+      "classId": "c2",
+      "month": "May 2026",
+      "theme": "Nature & Growth",
+      "weeklyLessons": [
+        {
+          "week": "Week 1",
+          "topic": "Seed Sprouting",
+          "completed": true
+        },
+        {
+          "week": "Week 2",
+          "topic": "Insects & Caterpillars",
+          "completed": true
+        },
+        {
+          "week": "Week 3",
+          "topic": "Weather & Rainbows",
+          "completed": true
+        },
+        {
+          "week": "Week 4",
+          "topic": "Recycling & Soil",
+          "completed": false
+        }
+      ],
+      "stories": [
+        "The Very Hungry Caterpillar",
+        "The Tiny Seed"
+      ],
+      "worksheets": [
+        "Match the Bug.pdf",
+        "Color the Rainbow.pdf"
+      ],
+      "status": "Pending"
+    }
+  ],
+  "inventory_items": [
+    {
+      "id": "i1",
+      "name": "Wooden Building Block Sets",
+      "category": "Toys",
+      "quantity": 10,
+      "damagedQuantity": 2,
+      "assignedClassId": "c1",
+      "lowStockThreshold": 3
+    },
+    {
+      "id": "i2",
+      "name": "Crayola Washable Paint Packs",
+      "category": "Art",
+      "quantity": 2,
+      "damagedQuantity": 0,
+      "assignedClassId": "c2",
+      "lowStockThreshold": 5
+    },
+    {
+      "id": "i3",
+      "name": "The Very Hungry Caterpillar Books",
+      "category": "Books",
+      "quantity": 8,
+      "damagedQuantity": 1,
+      "assignedClassId": "c2",
+      "lowStockThreshold": 2
+    }
+  ],
+  "daycare_logs": [
+    {
+      "id": "dl1",
+      "studentId": "s1",
+      "date": "2026-05-29",
+      "meals": [
+        {
+          "time": "09:30 AM",
+          "desc": "Fruit bowl and milk - Ate all of it"
+        },
+        {
+          "time": "01:00 PM",
+          "desc": "Mac and cheese - Finished half"
+        }
+      ],
+      "naps": [
+        {
+          "start": "02:00 PM",
+          "end": "03:30 PM",
+          "desc": "Slept peacefully"
+        }
+      ],
+      "plays": [
+        "Blocks building",
+        "Sandpit sensory box"
+      ],
+      "diapers": [
+        {
+          "time": "10:30 AM",
+          "status": "Wet change"
+        },
+        {
+          "time": "03:45 PM",
+          "status": "Dry/clean change"
+        }
+      ],
+      "mood": "Happy",
+      "notes": "Had a wonderful time building high towers today."
+    }
+  ],
+  "staff": [
+    {
+      "id": "st1",
+      "name": "Emily Watson",
+      "role": "Teacher",
+      "assignedClassId": "c2",
+      "shift": "Morning"
+    },
+    {
+      "id": "st2",
+      "name": "Jessica Cruz",
+      "role": "Staff",
+      "assignedClassId": "c4",
+      "shift": "Full Day"
+    }
+  ],
+  "staff_attendance": [
+    {
+      "id": "sa1",
+      "staffId": "st1",
+      "date": "2026-05-29",
+      "status": "Present",
+      "checkIn": "08:15 AM",
+      "checkOut": ""
+    },
+    {
+      "id": "sa2",
+      "staffId": "st2",
+      "date": "2026-05-29",
+      "status": "Late",
+      "checkIn": "09:12 AM",
+      "checkOut": ""
+    }
+  ],
+  "duty_rosters": [
+    {
+      "id": "dr1",
+      "staffId": "st1",
+      "date": "2026-05-29",
+      "shift": "Morning (8:30 AM - 1:30 PM)",
+      "assignedArea": "Nursery Room"
+    },
+    {
+      "id": "dr2",
+      "staffId": "st2",
+      "date": "2026-05-29",
+      "shift": "Daycare Core (9:00 AM - 6:00 PM)",
+      "assignedArea": "Daycare Main Room"
+    }
+  ],
+  "teacher_tasks": [
+    {
+      "id": "tt1",
+      "teacherId": "u2",
+      "title": "Submit Weekly Lesson Plan",
+      "description": "Upload lessons for Nature week to admin.",
+      "dueDate": "2026-05-30",
+      "status": "Pending"
+    },
+    {
+      "id": "tt2",
+      "teacherId": "u2",
+      "title": "Upload Leo's Art Photo",
+      "description": "Upload the Finger Painting activity picture.",
+      "dueDate": "2026-05-29",
+      "status": "Completed"
+    }
+  ],
+  "admission_leads": [
+    {
+      "id": "l1",
+      "childName": "Mason Scott",
+      "childAge": "3 Years",
+      "parentName": "Douglas Scott",
+      "parentPhone": "+1 (555) 014-9988",
+      "email": "dscott@example.com",
+      "counsellorId": "u5",
+      "status": "Follow-up Needed",
+      "nextFollowupDate": "2026-05-30",
+      "notes": "Parent inquired about preschool morning timings and safety procedures."
+    },
+    {
+      "id": "l2",
+      "childName": "Chloe Carter",
+      "childAge": "2 Years",
+      "parentName": "Mia Carter",
+      "parentPhone": "+1 (555) 018-7711",
+      "email": "mcarter@example.com",
+      "counsellorId": "u5",
+      "status": "Demo Scheduled",
+      "nextFollowupDate": "2026-06-01",
+      "notes": "Counsellor scheduled a site visit and classroom observation demo on Monday."
+    }
+  ],
+  "meetings": [
+    {
+      "id": "m1",
+      "parentId": "u3",
+      "teacherId": "u2",
+      "date": "2026-06-02",
+      "time": "04:00 PM",
+      "status": "Requested",
+      "notes": "Discuss Leo's speech development progress."
+    }
+  ],
+  "milestones": [
+    {
+      "id": "ms1",
+      "studentId": "s1",
+      "category": "Speech",
+      "rating": "Improving",
+      "observation": "Starting to form complete 4-word sentences.",
+      "recommendation": "Encourage storytelling during bedtime.",
+      "date": "2026-05-20"
+    },
+    {
+      "id": "ms2",
+      "studentId": "s1",
+      "category": "Motor Skills",
+      "rating": "Excellent",
+      "observation": "Very good grip on crayons and stacks blocks with ease.",
+      "recommendation": "Introduce child-safe scissors cutting.",
+      "date": "2026-05-20"
+    }
+  ],
+  "referrals": [
+    {
+      "id": "ref1",
+      "referringParentId": "u3",
+      "referredChildName": "Sophia Allen",
+      "referredParentName": "Richard Allen",
+      "referredParentPhone": "+1 (555) 019-3388",
+      "status": "Converted",
+      "rewardStatus": "Unclaimed"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "ex1",
+      "category": "Rent",
+      "amount": 2500,
+      "date": "2026-05-01",
+      "description": "Monthly facility building rent",
+      "billUrl": "/bills/rent_may.pdf"
+    },
+    {
+      "id": "ex2",
+      "category": "Food",
+      "amount": 420,
+      "date": "2026-05-15",
+      "description": "Groceries for daycare lunch meals",
+      "billUrl": "/bills/food_15.pdf"
+    },
+    {
+      "id": "ex3",
+      "category": "Learning Material",
+      "amount": 180,
+      "date": "2026-05-20",
+      "description": "Watercolors and worksheets printing",
+      "billUrl": ""
+    }
+  ],
+  "library_books": [
+    {
+      "id": "lib1",
+      "title": "Green Eggs and Ham",
+      "author": "Dr. Seuss",
+      "quantity": 3,
+      "available": 2
+    },
+    {
+      "id": "lib2",
+      "title": "Goodnight Moon",
+      "author": "Margaret Wise Brown",
+      "quantity": 5,
+      "available": 5
+    }
+  ],
+  "book_issues": [
+    {
+      "id": "bi1",
+      "bookId": "lib1",
+      "studentId": "s1",
+      "issueDate": "2026-05-25",
+      "dueDate": "2026-06-01",
+      "returnDate": "",
+      "status": "Issued"
+    }
+  ],
+  "birthdays": [
+    {
+      "id": "b1",
+      "studentId": "s1",
+      "birthDate": "2023-06-05",
+      "celebrationDate": "2026-06-05",
+      "preferences": "Chocolate cake, balloon decorations",
+      "cakeNotes": "Eggless chocolate cake, no nuts due to allergy",
+      "photos": []
+    }
+  ],
+  "lost_found_items": [
+    {
+      "id": "lf1",
+      "name": "Blue Spiderman Water Bottle",
+      "photoUrl": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&q=80&w=200",
+      "description": "Metal bottle with Spiderman print, found in play area.",
+      "classId": "c2",
+      "status": "Found",
+      "reportedDate": "2026-05-28",
+      "receiverName": "",
+      "returnedDate": ""
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "userId": "u1",
+      "title": "Low Stock Alert",
+      "message": "Crayola Paint Packs are down to 2 units.",
+      "type": "Inventory",
+      "isRead": false,
+      "timestamp": "2026-05-29T08:00:00Z"
+    },
+    {
+      "id": "n2",
+      "userId": "u3",
+      "title": "Daily Photo Shared",
+      "message": "Emma Watson Jr uploaded a picture of Leo.",
+      "type": "Activity",
+      "isRead": false,
+      "timestamp": "2026-05-29T09:45:00Z"
+    }
+  ]
+}
